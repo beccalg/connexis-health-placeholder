@@ -1,0 +1,119 @@
+/*
+  Connexis Health — placeholder site
+  A single static page. No navigation, no routes, no links by design.
+  Colors, type, and spacing are exposed as custom properties so this
+  can be restyled or extended without hunting through the rules below.
+*/
+
+:root {
+  --color-bg: #fcfcfb;
+  --color-navy: #17365c;
+  --color-teal: #0f7b73;
+  --color-text: #4a5560;
+
+  --font-family: "Jost", Helvetica, Arial, sans-serif;
+
+  --content-max-width: 720px;
+  --logo-max-width: 620px;
+
+  --space-page: clamp(24px, 6vw, 48px);
+  --space-stack: clamp(28px, 5vw, 40px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg);
+  font-family: var(--font-family);
+  padding: var(--space-page);
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-stack);
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: var(--logo-max-width);
+  height: auto;
+  display: block;
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.rule {
+  width: 36px;
+  height: 1px;
+  background: var(--color-navy);
+  display: block;
+}
+
+.rule--accent {
+  background: var(--color-teal);
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+/* Eyebrow line wraps to two lines below the dividers on very narrow screens. */
+@media (min-width: 420px) {
+  .notice {
+    flex-direction: row;
+    gap: 14px;
+  }
+}
+
+.blurb {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-weight: 300;
+  max-width: 460px;
+  text-wrap: pretty;
+}
