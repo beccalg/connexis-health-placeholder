@@ -33,11 +33,11 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;blurb&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Our new site is on the way. In the meantime, reach out and we will be glad to connect.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;blurb&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Our new site is on the way.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     return {
-      blurb: this.props.blurb ?? "Our new site is on the way. Please check back soon."
+      blurb: this.props.blurb ?? "Our new site is on the way."
     };
   }
 }
